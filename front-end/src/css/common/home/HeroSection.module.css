@@ -1,0 +1,40 @@
+.hero-bg {
+  height: 100vh;
+  background-image: url("/src/assets/images/home/hero_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+}
+
+.hero-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+}
+
+.hero-container h2 {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.hero-container h2 > strong {
+  font-weight: 500;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}

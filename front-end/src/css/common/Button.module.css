@@ -1,0 +1,25 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+.non-select-btn {
+  background-color: #f1f1f5;
+  color: #999;
+}
+
+.select-btn {
+  background-color: #4200ff;
+  color: #fff;
+}
+
+.line-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
