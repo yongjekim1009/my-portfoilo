@@ -5,7 +5,7 @@ import contactBtn from "../../../assets/images/button/contact-btn-icon.svg";
 
 export const HeroSection = () => {
   return (
-    <div className={styles["hero-bg"]}>
+    <section className={styles["hero-bg"]}>
       <div className={styles["hero-container"]}>
         <h1>Creative Designer</h1>
         <h2>
@@ -17,10 +17,10 @@ export const HeroSection = () => {
             <img src={portfolioBtn} alt="포트폴리오 아이콘" />
           </button>
           <button>
-            <img src={contactBtn} alt="연락하기기 아이콘" />
+            <img src={contactBtn} alt="연락하기 아이콘" />
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

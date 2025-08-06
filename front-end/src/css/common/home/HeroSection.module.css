@@ -22,12 +22,18 @@
   font-weight: 700;
   margin-bottom: 16px;
   letter-spacing: 0;
+
+  animation: fadeInUp 1s ease-out;
 }
 
 .hero-container h2 {
   font-size: 20px;
   font-weight: 200;
   margin-bottom: 40px;
+
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
 }
 
 .hero-container h2 > strong {
@@ -37,4 +43,19 @@
 .btn-group {
   display: flex;
   gap: 20px;
+
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

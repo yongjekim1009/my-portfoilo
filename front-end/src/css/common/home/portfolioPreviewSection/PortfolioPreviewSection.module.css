@@ -1,17 +1,17 @@
-.list-container {
+.preview-container {
   max-width: 1320px;
   padding: 0 20px;
   margin: 0 auto;
   text-align: center;
 }
 
-.list-container h1 {
+.preview-container h1 {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 24px;
 }
 
-.list-container p {
+.preview-container p {
   font-size: 16px;
   font-weight: 400;
   color: #767676;

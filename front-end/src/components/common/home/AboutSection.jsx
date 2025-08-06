@@ -1,13 +1,48 @@
+import { useEffect, useRef, useState } from "react";
 import styles from "../../../css/common/home/AboutSection.module.css";
 import aboutImg from "../../../assets/images/home/about-img.svg";
 import moreBtn from "../../../assets/images/button/more-btn-icon.svg";
-import Button from "../Button";
 
 export const AboutSection = () => {
+  const introRef = useRef(null);
+  const imgRef = useRef(null);
+
+  const [hasIntroAnimated, setHasIntroAnimated] = useState(false);
+  const [hasImgAnimated, setHasImgAnimated] = useState(false);
+
+  useEffect(() => {
+    const options = { threshold: 0.3 };
+
+    const introObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !hasIntroAnimated) {
+        setHasIntroAnimated(true); // 한 번만 실행
+      }
+    }, options);
+
+    const imgObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !hasImgAnimated) {
+        setHasImgAnimated(true); // 한 번만 실행
+      }
+    }, options);
+
+    if (introRef.current) introObserver.observe(introRef.current);
+    if (imgRef.current) imgObserver.observe(imgRef.current);
+
+    return () => {
+      introObserver.disconnect();
+      imgObserver.disconnect();
+    };
+  }, [hasIntroAnimated, hasImgAnimated]);
+
   return (
-    <div className={styles["about-bg"]}>
+    <section className={styles["about-bg"]}>
       <div className={styles["about-container"]}>
-        <div className={styles["about-intro"]}>
+        <div
+          ref={introRef}
+          className={`${styles["about-intro"]} ${
+            hasIntroAnimated ? styles["fade-in-left"] : ""
+          }`}
+        >
           <h1>About Me</h1>
           <h2>
             안녕하세요
@@ -25,15 +60,19 @@ export const AboutSection = () => {
             <br />
             브랜드와 사람을 연결시키는 의미 있는 경험을 만들겠습니다.
           </p>
-          {/* <Button variant="line-btn">더보기</Button> */}
           <button>
             <img src={moreBtn} alt="더보기 버튼" />
           </button>
         </div>
-        <div className={styles["about-img"]}>
+        <div
+          ref={imgRef}
+          className={`${styles["about-img"]} ${
+            hasImgAnimated ? styles["fade-in-right"] : ""
+          }`}
+        >
           <img src={aboutImg} alt="소개이미지" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -8,12 +8,12 @@
   height: fit-content;
 }
 
-.non-select-btn {
+.disabled-btn {
   background-color: #f1f1f5;
-  color: #999;
+  color: #505050;
 }
 
-.select-btn {
+.active-btn {
   background-color: #4200ff;
   color: #fff;
 }

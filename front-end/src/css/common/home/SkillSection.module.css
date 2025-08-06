@@ -17,3 +17,28 @@
   color: #767676;
   margin-bottom: 48px;
 }
+
+.skill-group {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  width: 196px;
+  height: 196px;
+  padding: 30px 33px;
+}
+
+.skill-icon {
+  margin-bottom: 12px;
+  line-height: normal;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+}
