@@ -6,6 +6,13 @@
   cursor: pointer;
   width: fit-content;
   height: fit-content;
+
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  transition: all 0.2s ease;
 }
 
 .disabled-btn {

@@ -20,8 +20,9 @@
   font-family: "Roboto", sans-serif;
   font-size: 72px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   letter-spacing: 0;
+  line-height: 1;
 
   animation: fadeInUp 1s ease-out;
 }
@@ -29,7 +30,7 @@
 .hero-container h2 {
   font-size: 20px;
   font-weight: 200;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   animation: fadeInUp 1s ease-out;
   animation-delay: 0.3s;

@@ -7,7 +7,7 @@ const CATEGORIES = [
   { id: "banner", label: "배너" },
 ];
 
-const CategoryButtons = ({ selected, onSelect }) => {
+const CategoryButton = ({ selected, onSelect }) => {
   return (
     <div className={styles["category-btn-group"]}>
       {CATEGORIES.map((category) => (
@@ -23,4 +23,4 @@ const CategoryButtons = ({ selected, onSelect }) => {
   );
 };
 
-export default CategoryButtons;
+export default CategoryButton;
