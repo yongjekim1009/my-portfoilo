@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../../../css/common/home/AboutSection.module.css";
-import aboutImg from "../../../assets/images/home/about-img.svg";
-import moreBtn from "../../../assets/images/button/more-btn-icon.svg";
+import styles from "./AboutSection.module.css";
+import aboutImg from "../../assets/images/home/about-img.svg";
+import moreBtn from "../../assets/images/button/more-btn-icon.svg";
 
 export const AboutSection = () => {
   const introRef = useRef(null);

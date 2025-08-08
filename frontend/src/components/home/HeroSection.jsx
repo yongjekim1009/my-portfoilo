@@ -1,7 +1,7 @@
-import styles from "../../../css/common/home/HeroSection.module.css";
+import styles from "./HeroSection.module.css";
 
-import portfolioBtn from "../../../assets/images/button/portfolio-btn-icon.svg";
-import contactBtn from "../../../assets/images/button/contact-btn-icon.svg";
+import portfolioBtn from "../../assets/images/button/portfolio-btn-icon.svg";
+import contactBtn from "../../assets/images/button/contact-btn-icon.svg";
 
 export const HeroSection = () => {
   return (

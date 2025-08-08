@@ -1,16 +1,16 @@
-import styles from "../../../css/common/home/skillSection.module.css";
+import styles from "./skillSection.module.css";
 
-import photoshop from "../../../assets/images/tool/photoshop-icon.svg";
-import illustrator from "../../../assets/images/tool/illustrator-icon.svg";
-import pigma from "../../../assets/images/tool/pigma-icon.svg";
-import html from "../../../assets/images/tool/html-icon.svg";
-import css from "../../../assets/images/tool/css-icon.svg";
-import javascript from "../../../assets/images/tool/javascript-icon.svg";
-import java from "../../../assets/images/tool/java-icon.svg";
-import react from "../../../assets/images/tool/react-icon.svg";
-import spring from "../../../assets/images/tool/spring-boot-icon.svg";
-import oracle from "../../../assets/images/tool/oracle-db-icon.svg";
-import premiere from "../../../assets/images/tool/premiere-pro-icon.svg";
+import photoshop from "../../assets/images/tool/photoshop-icon.svg";
+import illustrator from "../../assets/images/tool/illustrator-icon.svg";
+import pigma from "../../assets/images/tool/pigma-icon.svg";
+import html from "../../assets/images/tool/html-icon.svg";
+import css from "../../assets/images/tool/css-icon.svg";
+import javascript from "../../assets/images/tool/javascript-icon.svg";
+import java from "../../assets/images/tool/java-icon.svg";
+import react from "../../assets/images/tool/react-icon.svg";
+import spring from "../../assets/images/tool/spring-boot-icon.svg";
+import oracle from "../../assets/images/tool/oracle-db-icon.svg";
+import premiere from "../../assets/images/tool/premiere-pro-icon.svg";
 
 export const SkillSection = () => {
   return (

@@ -1,7 +1,7 @@
-import styles from "../../../css/common/home/ContactSection.module.css";
+import styles from "./ContactSection.module.css";
 
-import phone from "../../../assets/images/contact/phone-icon.svg";
-import email from "../../../assets/images/contact/email-icon.svg";
+import phone from "../../assets/images/contact/phone-icon.svg";
+import email from "../../assets/images/contact/email-icon.svg";
 
 export const ContactSection = () => {
   return (

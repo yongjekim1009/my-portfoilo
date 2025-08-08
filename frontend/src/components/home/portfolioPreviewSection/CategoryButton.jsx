@@ -1,5 +1,5 @@
-import Button from "../../Button";
-import styles from "../../../../css/common/home/portfolioPreviewSection/CategoryButton.module.css";
+import Button from "../../common/Button";
+import styles from "./CategoryButton.module.css";
 
 const CATEGORIES = [
   { id: "web", label: "웹디자인" },

@@ -1,4 +1,4 @@
-import styles from "../../../../css/common/home/portfolioPreviewSection/PortfolioPreviewSection.module.css";
+import styles from "./PortfolioPreviewSection.module.css";
 import CategoryButton from "./CategoryButton";
 import ThumbnailList from "./ThumbnailList";
 import { useState } from "react";
