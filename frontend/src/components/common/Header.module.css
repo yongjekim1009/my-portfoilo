@@ -1,3 +1,8 @@
+.header-section {
+  width: 100%;
+  border-bottom: 1px solid #e5e5ec;
+}
+
 .header-container {
   font-family: "Roboto", sans-serif;
   max-width: 1320px;

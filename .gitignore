@@ -111,3 +111,6 @@ replay_pid*
 # React 환경 변수 파일
 .env
 .env.*
+
+# InitAdminRunner 제외
+/src/main/java/com/kimyongje/portfolio/admin/InitAdminRunner.java

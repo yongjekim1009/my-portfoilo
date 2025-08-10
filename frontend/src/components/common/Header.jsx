@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles["header-section"]}>
       <div className={styles["header-container"]}>
         <div className={styles["header-logo"]}>
           <h1>
