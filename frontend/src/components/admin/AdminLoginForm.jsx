@@ -1,15 +1,19 @@
+// AdminLoginForm.jsx
 import styles from "./AdminLoginForm.module.css";
 import { useNavigate } from "react-router-dom";
 import { useAdminAuthStore } from "../../store/adminAuthStore";
 import { useEffect, useState } from "react";
+import { login as loginApi } from "../../api/authApi";
 
 const AdminLoginForm = () => {
-  const { isLogin, login } = useAdminAuthStore();
+  const { isLogin, login: markLoggedIn } = useAdminAuthStore();
   const navigate = useNavigate();
 
   const [adminId, setAdminId] = useState("");
   const [adminPw, setAdminPw] = useState("");
   const [rememberId, setRememberId] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   // 저장된 아이디 로드
   useEffect(() => {
@@ -20,24 +24,43 @@ const AdminLoginForm = () => {
     }
   }, []);
 
-  const handleLogin = (e) => {
+  // 로그인 되어있으면 리디렉트
+  useEffect(() => {
+    if (isLogin) navigate("/admin");
+  }, [isLogin, navigate]);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setErrorMsg("");
+    setLoading(true);
 
-    // 아이디 저장 체크 시 저장 / 아니면 삭제
-    if (rememberId && adminId.trim()) {
-      localStorage.setItem("admin_saved_id", adminId.trim());
-    } else {
-      localStorage.removeItem("admin_saved_id");
+    try {
+      // 아이디 저장 체크
+      if (rememberId && adminId.trim()) {
+        localStorage.setItem("admin_saved_id", adminId.trim());
+      } else {
+        localStorage.removeItem("admin_saved_id");
+      }
+
+      // 백엔드 로그인 요청
+      // /api/auth/login 에서 { accessToken, refreshToken? } 내려온다고 가정
+      const { accessToken, refreshToken } = await loginApi(adminId, adminPw);
+
+      // 토큰 저장 → axios 인터셉터가 Authorization 헤더로 자동 첨부
+      localStorage.setItem("accessToken", accessToken);
+      if (refreshToken) localStorage.setItem("refreshToken", refreshToken);
+
+      // 전역 상태 갱신 후 이동
+      markLoggedIn();
+      navigate("/admin");
+    } catch (err) {
+      setErrorMsg(
+        err?.message || "로그인에 실패했어요. 아이디/비밀번호를 확인해주세요."
+      );
+    } finally {
+      setLoading(false);
     }
-
-    login();
-    navigate("/admin");
   };
-
-  if (isLogin) {
-    navigate("/admin");
-    return null;
-  }
 
   return (
     <div className={styles["form-container"]}>
@@ -55,6 +78,7 @@ const AdminLoginForm = () => {
             placeholder="관리자 아이디를 입력하세요"
             value={adminId}
             onChange={(e) => setAdminId(e.target.value)}
+            autoComplete="username"
             required
           />
 
@@ -67,11 +91,11 @@ const AdminLoginForm = () => {
             placeholder="비밀번호를 입력하세요"
             value={adminPw}
             onChange={(e) => setAdminPw(e.target.value)}
+            autoComplete="current-password"
             required
           />
         </div>
 
-        {/* 아이디 저장하기 */}
         <div className={styles["remember-check"]}>
           <input
             id="rememberId"
@@ -84,16 +108,23 @@ const AdminLoginForm = () => {
           </label>
         </div>
 
-        <button type="submit" className={styles["login-btn"]}>
-          로그인
+        <button
+          type="submit"
+          className={styles["login-btn"]}
+          disabled={loading}
+        >
+          {loading ? "로그인 중..." : "로그인"}
         </button>
         <button
           type="button"
           className={styles["back-btn"]}
           onClick={() => navigate(-1)}
+          disabled={loading}
         >
           뒤로가기
         </button>
+
+        {errorMsg && <div className={styles["error-msg"]}>{errorMsg}</div>}
       </form>
     </div>
   );
