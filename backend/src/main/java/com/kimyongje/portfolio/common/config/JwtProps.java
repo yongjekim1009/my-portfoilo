@@ -1,4 +1,4 @@
-package com.kimyongje.portfolio.config;
+package com.kimyongje.portfolio.common.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

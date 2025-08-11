@@ -11,4 +11,19 @@ public interface AdminMapper {
 	Admin findById(String adminId);
     int countById(String adminId);
     int insertAdmin(Admin admin);
+//	@Select("""
+//		    SELECT ADMIN_ID AS adminId, ADMIN_PW AS adminPw
+//		    FROM ADMIN_USER
+//		    WHERE ADMIN_ID = #{adminId}
+//		  """)
+//		  Admin findById(@Param("adminId") String adminId);
+//
+//		  @Select("SELECT COUNT(*) FROM ADMIN_USER WHERE ADMIN_ID = #{adminId}")
+//		  int countById(@Param("adminId") String adminId);
+//
+//		  @Insert("""
+//		    INSERT INTO ADMIN_USER (ADMIN_ID, ADMIN_PW)
+//		    VALUES (#{adminId}, #{adminPw})
+//		  """)
+//		  int insertAdmin(Admin admin);
 }

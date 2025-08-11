@@ -11,12 +11,12 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class AdminServiceImpl implements AdminService {
-	private final AdminMapper adminMapper;
+	private final AdminMapper mapper;
     private final PasswordEncoder encoder;
 
     @Override
     public boolean verify(String adminId, String rawPw) {
-        Admin admin = adminMapper.findById(adminId);
+        Admin admin = mapper.findById(adminId);
         return admin != null && encoder.matches(rawPw, admin.getAdminPw());
     }
 }
