@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kimyongje.portfolio.admin.model.mapper.AdminMapper">
+
+	<!-- 관리자 조회 -->
+	<select id="findById" parameterType="string" resultType="com.kimyongje.portfolio.admin.model.dto.Admin">
+		SELECT * FROM ADMIN_USER
+        WHERE ADMIN_ID = #{adminId}
+	</select>
+	
+	<!-- 관리자 존재 여부 -->
+	<select id="countById" parameterType="string" resultType="int">
+    	SELECT COUNT(*)
+    	FROM ADMIN_USER
+    	WHERE ADMIN_ID = #{adminId}
+	</select>
+	
+	<!-- 관리자 일회성 등록 (비밀번호는 BCrypt 해시) -->
+	<insert id="insertAdmin" parameterType="com.kimyongje.portfolio.admin.model.dto.Admin">
+    	INSERT INTO ADMIN_USER (ADMIN_ID, ADMIN_PW)
+    	VALUES (#{adminId}, #{adminPw})
+	</insert>
+	
+</mapper>

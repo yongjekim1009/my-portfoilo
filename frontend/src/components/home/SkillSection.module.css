@@ -1,0 +1,44 @@
+.skill-container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skill-container h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.skill-container p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 48px;
+}
+
+.skill-group {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  width: 196px;
+  height: 196px;
+  padding: 30px 33px;
+}
+
+.skill-icon {
+  margin-bottom: 12px;
+  line-height: normal;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+}

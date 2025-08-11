@@ -1,0 +1,19 @@
+.preview-container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preview-container h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.preview-container p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 48px;
+}

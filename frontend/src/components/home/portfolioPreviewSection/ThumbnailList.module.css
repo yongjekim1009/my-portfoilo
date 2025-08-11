@@ -1,0 +1,7 @@
+/* ThumbnailList.module.css */
+.thumbnail-list {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
