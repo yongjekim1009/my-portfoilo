@@ -16,13 +16,13 @@
 }
 
 .disabled-btn {
-  background-color: #f1f1f5;
-  color: #505050;
+  background-color: var(--btn-color-bg-disable);
+  color: var(--btn-color-text-disable);
 }
 
 .active-btn {
-  background-color: #4200ff;
-  color: #fff;
+  background-color: var(--btn-color-bg-active);
+  color: var(--btn-color-text-active);
 }
 
 .line-btn {

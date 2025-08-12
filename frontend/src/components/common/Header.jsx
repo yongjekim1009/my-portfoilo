@@ -1,6 +1,9 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 
+import Day from "../../assets/images/darkmode/day-icon.svg";
+import Night from "../../assets/images/darkmode/night-icon.svg";
+
 const Header = () => {
   return (
     <header className={styles["header-section"]}>
@@ -20,6 +23,19 @@ const Header = () => {
             </li>
             <li>
               <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <div className={styles["dark-mode"]}>
+                <div className={styles["dark-mode-btn-indicator"]}>
+                  <div className={styles["dark-mode-btn-icon-container"]}>
+                    <img
+                      src={Day}
+                      alt="다크 모드 아이콘"
+                      className={styles["dark-mode-btn-icon"]}
+                    />
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>

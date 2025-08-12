@@ -7,11 +7,42 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Brand */
+  --color-primary500: #4200ff;
+
+  /* Text */
+  --color-text-basic: #111111; /* 본문 기본 */
+  --color-text-secondary: #505050; /* 부제/섹션 타이틀 */
+  --color-text-sub: #767676; /* 보조 설명, 메타 */
+  --color-text-disable: #999999; /* 비활성/placeholder */
+  --color-text-inverse: #ffffff; /* 어두운 배경 위 텍스트 */
+
+  /* Background / Surface */
+  --color-bg-basic: #ffffff; /* 페이지 기본 배경(명시) */
+  --color-bg-soft: #f7f7fb; /* 옅은 배경 */
+  --color-bg-inverse: #111111; /* 어두운 배경 */
+
+  /* Border / Divider */
+  --color-border-basic: #111111; /* 기본 라인 컬러 */
+  --color-border-sub: #f1f1f5; /* 서브 라인 컬러 */
+
+  /* button */
+  --btn-color-text-active: #ffffff; /* 활성화 텍스트트 */
+  --btn-color-bg-active: #4200ff; /* 활성화 배경 */
+  --btn-color-text-disable: #505050; /* 비활성화 텍스트 */
+  --btn-color-bg-disable: #f1f1f5; /* 비활성화 배경 */
+
+  /* dark-mode-btn-icon */
+  --dark-mode-btn-color: #ffffff;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
-  color: #111;
   line-height: 1.4;
   letter-spacing: -0.5px;
+  color: var(--color-text-basic);
+  background-color: var(--color-bg-basic);
 }
 
 a {

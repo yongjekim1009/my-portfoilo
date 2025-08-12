@@ -14,7 +14,7 @@
 .skill-container p {
   font-size: 16px;
   font-weight: 400;
-  color: #767676;
+  color: var(--color-text-sub);
   margin-bottom: 48px;
 }
 
@@ -40,5 +40,4 @@
 .skill-name {
   font-size: 18px;
   font-weight: 500;
-  color: #111;
 }
