@@ -18,6 +18,7 @@ const Home = () => {
       <SkillSection />
       <BackgroundSection />
       <ContactSection />
+      <BackgroundSection />
     </MainLayout>
   );
 };

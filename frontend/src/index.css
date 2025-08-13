@@ -7,7 +7,23 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
 :root {
+  /* Basic Layout */
+  --layout-width: 132rem;
+  /* Basic Web Side Margin */
+  --spacing-section-x: 0 2rem;
+
+  /* Font size */
+  --font-size-display1: 8rem;
+  --font-size-display2: 5.6rem;
+  --font-size-headline: 4.8rem;
+  --font-size-title: 2rem;
+  --font-size-body: 1.6rem;
+
   /* Brand */
   --color-primary500: #4200ff;
 
@@ -27,20 +43,22 @@
   --color-border-basic: #111111; /* 기본 라인 컬러 */
   --color-border-sub: #f1f1f5; /* 서브 라인 컬러 */
 
-  /* button */
+  /* Button */
   --btn-color-text-active: #ffffff; /* 활성화 텍스트트 */
   --btn-color-bg-active: #4200ff; /* 활성화 배경 */
   --btn-color-text-disable: #505050; /* 비활성화 텍스트 */
   --btn-color-bg-disable: #f1f1f5; /* 비활성화 배경 */
+  --btn-color-line-text: #111111;
+  --btn-color-line: #e5e5ec;
 
-  /* dark-mode-btn-icon */
+  /* Darkmode Button */
   --dark-mode-btn-color: #ffffff;
 }
 
 body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.05rem;
   color: var(--color-text-basic);
   background-color: var(--color-bg-basic);
 }

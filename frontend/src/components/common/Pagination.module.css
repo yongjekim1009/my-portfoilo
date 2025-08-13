@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageList {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.pageBtn {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.num.active {
+  border-color: var(--color-border-sub);
+  color: var(--color-text-basic);
+}
+
+/* nav 화살표 버튼은 약간 더 옅은 톤 */
+.nav {
+  color: var(--color-text-sub);
+}

@@ -1,15 +1,17 @@
 .header-section {
   width: 100%;
   border-bottom: 1px solid var(--color-border-sub);
-  box-shadow: 0 40px 44px -3px rgba(0, 0, 0, 0.1);
   background-color: var(--color-bg-basic);
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  z-index: 1000;
 }
 
 .header-container {
   font-family: "Roboto", sans-serif;
-  max-width: 1320px;
-  height: 56px;
-  padding: 20px;
+  max-width: var(--layout-width);
+  height: 5.6rem;
+  padding: var(--spacing-section-x);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -18,7 +20,7 @@
 }
 
 .header-logo h1 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 500;
 }
 
@@ -27,20 +29,22 @@
   align-items: center;
   gap: 24px;
   list-style: none;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
 .header-menu a {
-  height: 56px;
+  display: flex;
+  align-items: center;
+  height: 5.6rem;
 }
 
 .dark-mode {
-  background-color: #fff;
-  width: 56px;
-  height: 32px;
-  border-radius: 50px;
-  padding: 0 2px;
+  background-color: var(--dark-mode-btn-color);
+  width: 4.8rem;
+  height: 2.8rem;
+  border-radius: 5rem;
+  padding: 0 0.2rem;
 
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1),
     inset 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
@@ -54,8 +58,8 @@
 
 .dark-mode-btn-indicator {
   background-color: #111;
-  width: 28px;
-  height: 28px;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
 
   position: absolute;
@@ -73,5 +77,5 @@
 
 .dark-mode-btn-icon {
   color: #fff;
-  font-size: 32px;
+  font-size: 1.8rem;
 }

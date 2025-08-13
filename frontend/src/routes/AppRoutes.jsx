@@ -3,11 +3,13 @@ import Home from "../pages/Home";
 import AdminLogin from "../pages/admin/AdminLogin";
 import PrivateRoute from "../routes/PrivateRoute";
 import AdminDashboard from "./../pages/admin/AdminDashboard";
+import Portfolio from "../pages/portfolio";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route
         path="/admin"

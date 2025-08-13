@@ -3,11 +3,11 @@
 }
 
 .about-container {
-  max-width: 1320px;
-  padding: 20px;
+  max-width: var(--layout-width);
+  padding: var(--spacing-section-x);
   margin: 0 auto;
   width: 100%;
-  min-height: 640px;
+  min-height: 64rem;
   color: white;
   display: flex;
   align-items: center;
@@ -18,22 +18,20 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-
-  /* 처음엔 애니메이션 없음 → 클래스 추가될 때만 실행 */
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-5rem);
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .about-img {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(5rem);
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .about-intro h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 60px;
+  font-size: var(--font-size-display2);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
@@ -41,7 +39,7 @@
 }
 
 .about-intro h2 {
-  font-size: 24px;
+  font-size: var(--font-size-title);
   font-weight: 200;
 }
 
@@ -50,6 +48,7 @@
 }
 
 .about-intro p {
+  font-size: var(--font-size-body);
   font-weight: 400;
   line-height: 1.7;
   color: #999;
@@ -61,7 +60,6 @@
   height: fit-content;
 }
 
-/* 애니메이션 클래스가 추가되면 실행 */
 .fade-in-left {
   animation: fadeInLeft 1s ease-out forwards;
 }
@@ -73,7 +71,7 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-5rem);
   }
   100% {
     opacity: 1;
@@ -84,7 +82,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(5rem);
   }
   100% {
     opacity: 1;

@@ -1,8 +1,8 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 
-import Day from "../../assets/images/darkmode/day-icon.svg";
-import Night from "../../assets/images/darkmode/night-icon.svg";
+import Day from "../../assets/images/darkmode/day-icon.svg?react";
+import Night from "../../assets/images/darkmode/night-icon.svg?react";
 
 const Header = () => {
   return (
@@ -28,11 +28,7 @@ const Header = () => {
               <div className={styles["dark-mode"]}>
                 <div className={styles["dark-mode-btn-indicator"]}>
                   <div className={styles["dark-mode-btn-icon-container"]}>
-                    <img
-                      src={Day}
-                      alt="다크 모드 아이콘"
-                      className={styles["dark-mode-btn-icon"]}
-                    />
+                    <Day className={styles["dark-mode-btn-icon"]} />
                   </div>
                 </div>
               </div>
