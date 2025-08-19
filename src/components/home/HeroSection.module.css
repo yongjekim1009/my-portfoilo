@@ -1,0 +1,62 @@
+.hero-bg {
+  height: 100vh;
+  background: url("/src/assets/images/home/hero_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: var(--layout-width);
+  padding: var(--spacing-section-x);
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+}
+
+.hero-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size-display1);
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0;
+  line-height: 1;
+
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-container h2 {
+  font-size: var(--font-size-title);
+  font-weight: 200;
+  margin-bottom: 32px;
+
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.hero-container h2 > strong {
+  font-weight: 500;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

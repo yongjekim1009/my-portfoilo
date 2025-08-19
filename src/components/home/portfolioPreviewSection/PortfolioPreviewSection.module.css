@@ -1,0 +1,24 @@
+.preview-container {
+  max-width: var(--layout-width);
+  padding: var(--spacing-section-x);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preview-wrapper {
+  padding: 0 12rem;
+  margin-bottom: 4.8rem;
+}
+
+.preview-container h1 {
+  font-size: var(--font-size-headline);
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.preview-container p {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+}

@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  background-color: #111;
+  border-top: 1px solid #767676;
+}
+
+.footer-container {
+  max-width: var(--layout-width);
+  padding: 6rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.footer-info {
+  color: #999999;
+  font-size: 1.2rem;
+}
+
+.footer-copyright {
+  color: #767676;
+  font-size: 1.2rem;
+}
+
+.divider {
+  font-family: "Roboto", sans-serif;
+  color: #767676;
+}

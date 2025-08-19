@@ -1,0 +1,32 @@
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  transition: all 0.2s ease;
+}
+
+.disabled-btn {
+  background-color: var(--btn-color-bg-disable);
+  color: var(--btn-color-text-disable);
+}
+
+.active-btn {
+  background-color: var(--btn-color-bg-active);
+  color: var(--btn-color-text-active);
+}
+
+.line-btn {
+  background-color: transparent;
+  color: var(--btn-color-line-text);
+  border: 1px solid var(--btn-color-line);
+}
