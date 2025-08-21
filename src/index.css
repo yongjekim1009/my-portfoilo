@@ -40,6 +40,8 @@ html {
   --color-bg-soft: #f7f7fb;
   --color-bg-inverse: #111111;
 
+  --color-header-bg: #ffffff;
+
   /* Border / Divider */
   --color-border-basic: #111111;
   --color-border-sub: #f1f1f5;
@@ -56,6 +58,29 @@ html {
 
   /* Darkmode Button */
   --dark-mode-btn-color: #ffffff;
+}
+
+body.dark-mode {
+  /* Text */
+  --color-text-basic: #ffffff;
+  --color-text-secondary: #eeeeee;
+  --color-text-sub: #999999;
+  --color-text-disable: #767676;
+  --color-text-inverse: #111111;
+
+  /* Background / Surface */
+  --color-bg-basic: #111111;
+  --color-bg-soft: #252528;
+  --color-bg-inverse: #ffffff;
+
+  --color-header-bg: #292929;
+
+  /* Border / Divider */
+  --color-border-basic: #ffffff;
+  --color-border-sub: #2f2f31;
+
+  /* Darkmode Button */
+  --dark-mode-btn-color: #333333;
 }
 
 body {

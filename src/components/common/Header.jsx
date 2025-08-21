@@ -1,10 +1,12 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-
 import Day from "../../assets/images/darkmode/day-icon.svg?react";
 import Night from "../../assets/images/darkmode/night-icon.svg?react";
+import useDarkMode from "../darkmode/UseDarkMode";
 
 const Header = () => {
+  const [isDarkMode, toggleDarkMode] = useDarkMode(); // 다크모드 사용
+
   return (
     <header className={styles["header-section"]}>
       <div className={styles["header-container"]}>
@@ -25,10 +27,21 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <div className={styles["dark-mode"]}>
-                <div className={styles["dark-mode-btn-indicator"]}>
+              <div
+                className={styles["dark-mode"]}
+                onClick={toggleDarkMode} // 클릭 이벤트에 함수 연결
+              >
+                <div
+                  className={`${styles["dark-mode-btn-indicator"]} ${
+                    isDarkMode ? styles.active : "" // 다크 모드 상태에 따라 클래스 추가
+                  }`}
+                >
                   <div className={styles["dark-mode-btn-icon-container"]}>
-                    <Day className={styles["dark-mode-btn-icon"]} />
+                    {isDarkMode ? (
+                      <Night className={styles["dark-mode-btn-icon"]} />
+                    ) : (
+                      <Day className={styles["dark-mode-btn-icon"]} />
+                    )}
                   </div>
                 </div>
               </div>
