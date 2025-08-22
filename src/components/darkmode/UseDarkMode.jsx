@@ -1,25 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import useDarkModeStore from "../../store/darkModeStore";
 
 const UseDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const isDarkMode = useDarkModeStore((state) => state.isDarkMode);
+  const toggleDarkMode = useDarkModeStore((state) => state.toggleDarkMode);
 
   useEffect(() => {
-    const isDark = localStorage.getItem("isDarkMode") === "true";
-    setIsDarkMode(isDark);
-  }, []);
+    const root = document.body;
+    root.classList.add("theme-transition");
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-    localStorage.setItem("isDarkMode", isDarkMode);
+    requestAnimationFrame(() => {
+      if (isDarkMode) {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+
+      setTimeout(() => {
+        root.classList.remove("theme-transition");
+      }, 300);
+    });
   }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-  };
 
   return [isDarkMode, toggleDarkMode];
 };

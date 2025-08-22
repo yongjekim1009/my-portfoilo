@@ -3,9 +3,24 @@ import { Link } from "react-router-dom";
 import Day from "../../assets/images/darkmode/day-icon.svg?react";
 import Night from "../../assets/images/darkmode/night-icon.svg?react";
 import useDarkMode from "../darkmode/UseDarkMode";
+import { useState } from "react";
 
 const Header = () => {
-  const [isDarkMode, toggleDarkMode] = useDarkMode(); // 다크모드 사용
+  const [isDarkMode, toggleDarkMode] = useDarkMode();
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleToggle = () => {
+    // 애니메이션 시작
+    setIsAnimating(true);
+
+    // 다크모드 토글
+    toggleDarkMode();
+
+    // 0.5초 후 애니메이션 클래스 제거
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  };
 
   return (
     <header className={styles["header-section"]}>
@@ -27,24 +42,29 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <div
-                className={styles["dark-mode"]}
-                onClick={toggleDarkMode} // 클릭 이벤트에 함수 연결
-              >
+              <button className={styles["mode-btn"]} onClick={handleToggle}>
                 <div
-                  className={`${styles["dark-mode-btn-indicator"]} ${
-                    isDarkMode ? styles.active : "" // 다크 모드 상태에 따라 클래스 추가
+                  className={`${styles["mode-btn-indicator"]} ${
+                    isDarkMode ? styles.active : ""
                   }`}
                 >
-                  <div className={styles["dark-mode-btn-icon-container"]}>
+                  <div className={styles["mode-btn-icon-container"]}>
                     {isDarkMode ? (
-                      <Night className={styles["dark-mode-btn-icon"]} />
+                      <Night
+                        className={`${styles["mode-btn-icon"]} ${
+                          isAnimating ? styles["animated"] : ""
+                        }`}
+                      />
                     ) : (
-                      <Day className={styles["dark-mode-btn-icon"]} />
+                      <Day
+                        className={`${styles["mode-btn-icon"]} ${
+                          isAnimating ? styles["animated"] : ""
+                        }`}
+                      />
                     )}
                   </div>
                 </div>
-              </div>
+              </button>
             </li>
           </ul>
         </nav>
