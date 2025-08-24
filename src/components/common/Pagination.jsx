@@ -1,72 +1,69 @@
 import styles from "./Pagination.module.css";
 
-export const Pagination = ({
-  current = 1,
-  total = 1,
-  onChange,
-  className = "",
-}) => {
-  // 숫자 구간(예: 현재가 11이면 11~20만 보여주기)
-  const size = 10; // 한 화면에 보여줄 페이지 숫자 개수
-  const start = Math.floor((current - 1) / size) * size + 1;
-  const end = Math.min(start + size - 1, total);
-  const pages = Array.from({ length: end - start + 1 }, (_, i) => start + i);
+const Pagination = ({ current = 1, totalPages = 1, onChange }) => {
+  if (totalPages <= 1) return null;
 
-  const go = (p) => {
-    if (p < 1 || p > total) return;
-    onChange?.(p);
-  };
+  const go = (n) => () => onChange?.(n);
+
+  // 페이지 번호(최대 5개 윈도우)
+  const windowSize = 5;
+  const half = Math.floor(windowSize / 2);
+  let start = Math.max(1, current - half);
+  let end = Math.min(totalPages, start + windowSize - 1);
+  if (end - start + 1 < windowSize) start = Math.max(1, end - windowSize + 1);
+
+  const pages = [];
+  for (let i = start; i <= end; i++) pages.push(i);
 
   return (
-    <nav
-      className={`${styles.pagination} ${className}`}
-      aria-label="페이지 네비게이션"
-    >
+    <nav className={styles["pagination"]} aria-label="페이지네이션">
       <button
-        className={`${styles.pageBtn} ${styles.nav}`}
-        onClick={() => go(1)}
-        aria-label="첫 페이지"
+        className={styles["nav-btn"]}
+        onClick={go(1)}
+        disabled={current === 1}
       >
-        «
+        « 처음
       </button>
       <button
-        className={`${styles.pageBtn} ${styles.nav}`}
-        onClick={() => go(current - 1)}
-        aria-label="이전 페이지"
+        className={styles["nav-btn"]}
+        onClick={go(Math.max(1, current - 1))}
+        disabled={current === 1}
       >
-        ‹
+        ‹ 이전
       </button>
 
-      <ul className={styles.pageList}>
-        {pages.map((p) => (
-          <li key={p}>
+      <ul className={styles["pages"]}>
+        {pages.map((n) => (
+          <li key={n}>
             <button
-              className={`${styles.pageBtn} ${styles.num} ${
-                p === current ? styles.active : ""
+              className={`${styles["page-btn"]} ${
+                n === current ? styles["active"] : ""
               }`}
-              aria-current={p === current ? "page" : undefined}
-              onClick={() => go(p)}
+              onClick={go(n)}
+              aria-current={n === current ? "page" : undefined}
             >
-              {p}
+              {n}
             </button>
           </li>
         ))}
       </ul>
 
       <button
-        className={`${styles.pageBtn} ${styles.nav}`}
-        onClick={() => go(current + 1)}
-        aria-label="다음 페이지"
+        className={styles["nav-btn"]}
+        onClick={go(Math.min(totalPages, current + 1))}
+        disabled={current === totalPages}
       >
-        ›
+        다음 ›
       </button>
       <button
-        className={`${styles.pageBtn} ${styles.nav}`}
-        onClick={() => go(total)}
-        aria-label="마지막 페이지"
+        className={styles["nav-btn"]}
+        onClick={go(totalPages)}
+        disabled={current === totalPages}
       >
-        »
+        끝 »
       </button>
     </nav>
   );
 };
+
+export default Pagination;

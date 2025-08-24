@@ -59,7 +59,7 @@ html {
   /* Darkmode Button */
   --dark-mode-btn-color: #fff;
   --dark-mode-indicator-color: #fff;
-  --dark-mode-icon-color: #ffc107;
+  --dark-mode-icon-color: #111;
 }
 
 body.dark-mode {

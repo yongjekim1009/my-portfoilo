@@ -1,6 +1,7 @@
 import styles from "./PortfolioListPage.module.css";
 import CategoryButton from "../common/CategoryButton";
 import { useState } from "react";
+import PortfolioThumbnail from "./PortfolioThumbnail";
 
 const PortfolioListPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("promotion");
@@ -20,6 +21,7 @@ const PortfolioListPage = () => {
           selected={selectedCategory}
           onSelect={setSelectedCategory}
         />
+        <PortfolioThumbnail category={selectedCategory} />
       </div>
     </div>
   );
