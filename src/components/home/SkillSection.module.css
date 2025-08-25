@@ -28,21 +28,21 @@
   letter-spacing: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .skill {
   width: 196px;
   height: 196px;
-  padding: 30px 33px;
+  padding: 3rem 3.3rem;
 }
 
 .skill-icon {
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   line-height: normal;
 }
 
 .skill-name {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
 }

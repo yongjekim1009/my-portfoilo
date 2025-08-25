@@ -1,17 +1,16 @@
-/* 전체 컨테이너: 화면 너비에 맞춰 가로 스크롤 트랙을 감춤 */
 .wrapper {
   position: relative;
   width: 100%;
   margin: 6.4rem auto 0;
   overflow: hidden;
-  padding: 0 20px; /* 좌우 여백 */
+  padding: 0 2rem; /* 좌우 여백 */
 }
 
 /* 무한 루프 트랙 */
 .track {
   display: flex;
   align-items: stretch;
-  gap: 20px;
+  gap: 2rem;
   /* 트랙을 왼쪽으로 계속 이동 */
   animation: scroll-left linear infinite;
   /* 아이템 수가 적을수록 약간 더 빠르게 */
@@ -34,7 +33,7 @@
   flex: 0 0 auto;
   width: 30.5rem;
   height: 30.5rem;
-  border-radius: 16px;
+  border-radius: 8px;
   background: #eee; /* 이미지 로딩 전 배경 */
   overflow: hidden;
 }
@@ -44,38 +43,4 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* 트랙 호버 시 일시정지 (데스크탑 UX 향상) */
-/* .wrapper:hover .track {
-  animation-play-state: paused;
-} */
-
-/* 다크 모드 대비 (옵션) */
-@media (prefers-color-scheme: dark) {
-  .gradientLeft {
-    background: linear-gradient(
-      to right,
-      rgba(17, 17, 17, 1),
-      rgba(17, 17, 17, 0)
-    );
-  }
-  .gradientRight {
-    background: linear-gradient(
-      to left,
-      rgba(17, 17, 17, 1),
-      rgba(17, 17, 17, 0)
-    );
-  }
-  .card {
-    background: #2a2a32;
-  }
-}
-
-/* 모션 최소화 환경 배려 */
-@media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none;
-    transform: translateX(0);
-  }
 }

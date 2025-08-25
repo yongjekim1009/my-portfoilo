@@ -2,15 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin: 28px 0 40px;
+  gap: 0.8rem;
+  margin: 2.8rem 0 4rem;
   flex-wrap: wrap;
 }
 
 .nav-btn {
   border: 1px solid #e5e5ec;
   background: #fff;
-  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -22,9 +22,9 @@
 
 .pages {
   display: flex;
-  gap: 6px;
+  gap: 0.6rem;
   list-style: none;
-  margin: 0 6px;
+  margin: 0 0.6rem;
   padding: 0;
 }
 

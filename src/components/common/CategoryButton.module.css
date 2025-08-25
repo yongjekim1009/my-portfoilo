@@ -1,6 +1,6 @@
 .category-btn-group {
   display: flex;
-  gap: 12px;
+  gap: 1.2rem;
   flex-wrap: wrap;
   justify-self: center;
 }

@@ -27,7 +27,7 @@
 .header-menu {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
   list-style: none;
   font-size: 1.6rem;
   font-weight: 400;
@@ -43,7 +43,7 @@
   background-color: var(--dark-mode-btn-color);
   width: 4.8rem;
   height: 2.8rem;
-  border-radius: 5rem;
+  border-radius: 50px;
   padding: 0 0.2rem;
 
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1),

@@ -17,7 +17,7 @@
 .about-intro {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 4.8rem;
   opacity: 0;
   transform: translateX(-5rem);
   transition: opacity 0.3s, transform 0.3s;
