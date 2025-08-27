@@ -1,6 +1,4 @@
 .thumb-container {
-  max-width: var(--layout-width);
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 4.8rem;
@@ -15,9 +13,9 @@
 .thumb-item {
   width: 30.5rem;
   height: 30.5rem;
-  background-color: #eee;
   border-radius: 8px;
   overflow: hidden;
+  background: #eee;
 }
 
 .thumb-item img {

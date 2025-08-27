@@ -32,10 +32,14 @@ const PortfolioThumbnail = ({ category }) => {
         {current.map((item) => (
           <div key={item.id} className={styles["thumb-wrapper"]}>
             {/* 상세 페이지로 이동 */}
-            <Link to={`/portfolio/${item.id}`} className={styles["thumb-item"]}>
-              <img src={item.src} alt={item.alt} loading="lazy" />
+            <Link to={`/portfolio/${item.id}`}>
+              <div className={styles["thumb-item"]}>
+                <img src={item.src} alt={item.alt} loading="lazy" />
+              </div>
             </Link>
-            <p className={styles["thumb-title"]}>{item.title || item.alt}</p>
+            <Link to={`/portfolio/${item.id}`}>
+              <p className={styles["thumb-title"]}>{item.title || item.alt}</p>
+            </Link>
           </div>
         ))}
       </div>

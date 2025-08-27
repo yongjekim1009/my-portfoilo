@@ -1,7 +1,8 @@
 .detail-container {
-  max-width: var(--layout-width, 1320px);
+  max-width: var(--layout-width);
+  padding: var(--spacing-section-x);
   margin: 0 auto;
-  padding: 48px 20px;
+  text-align: center;
 }
 
 .detail-category-name {
@@ -20,20 +21,6 @@
   color: #505050;
   line-height: 1.7;
   margin-bottom: 24px;
-}
-
-.detail-image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 24px 0 32px;
-}
-
-.detail-image-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
 }
 
 .detail-footer-nav {

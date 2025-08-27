@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import styles from "./PortfolioDetail.module.css";
+import styles from "./PortfolioDetailPage.module.css";
 import usePortfolioStore from "../../store/portfolioStore";
 
-const PortfolioDetail = () => {
+const PortfolioDetailPage = () => {
   const { id } = useParams();
   const findById = usePortfolioStore((s) => s.findById);
 
@@ -23,6 +23,9 @@ const PortfolioDetail = () => {
     );
   }
 
+  const detailSrc =
+    typeof item.images === "string" && item.images ? item.images : "";
+
   return (
     <div className={styles["detail-container"]}>
       <div className={styles["detail-category-name"]}>{item.category}</div>
@@ -31,13 +34,14 @@ const PortfolioDetail = () => {
         {item.description || "프로젝트 설명을 입력해주세요."}
       </p>
 
-      {/* 상세 이미지 갤러리 */}
-      <div className={styles["detail-image-grid"]}>
-        {(item.images || []).map((src, i) => (
-          <figure key={i} className={styles["detail-image-wrap"]}>
-            <img src={src} alt={`${item.alt || item.title} - ${i + 1}`} />
+      <div className={styles["detail-img"]}>
+        {detailSrc ? (
+          <figure className={styles["detail-image-wrap"]}>
+            <img src={detailSrc} alt={item.alt || item.title} />
           </figure>
-        ))}
+        ) : (
+          <p>이미지가 없습니다.</p>
+        )}
       </div>
 
       <div className={styles["detail-footer-nav"]}>
@@ -49,4 +53,4 @@ const PortfolioDetail = () => {
   );
 };
 
-export default PortfolioDetail;
+export default PortfolioDetailPage;

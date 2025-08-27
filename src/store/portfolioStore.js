@@ -1,4 +1,7 @@
 import { create } from "zustand";
+import p001 from "../assets/images/portfolio/promotion/promotion-001.jpg";
+import d001 from "../assets/images/portfolio/detail/detail-001.jpg";
+import b001 from "../assets/images/portfolio/banner/banner-001.jpg";
 
 const DATA = {
   promotion: [
@@ -7,8 +10,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 1",
       alt: "웹디자인 1",
-      thumb: "/assets/images/portfolio/promotion/promotion-001.jpg",
-      images: ["/assets/images/portfolio/promotion/promotion-001.jpg"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 1 설명.",
     },
     {
@@ -16,8 +19,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 2",
       alt: "웹디자인 2",
-      thumb: "/assets/portfolio/ex01.png",
-      images: ["/assets/portfolio/ex01.png"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 2 설명.",
     },
     {
@@ -25,8 +28,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 3",
       alt: "웹디자인 3",
-      thumb: "/assets/portfolio/ex01.png",
-      images: ["/assets/portfolio/ex01.png"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 3 설명.",
     },
     {
@@ -34,8 +37,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 4",
       alt: "웹디자인 4",
-      thumb: "/assets/portfolio/ex01.png",
-      images: ["/assets/portfolio/ex01.png"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 4 설명.",
     },
     {
@@ -43,8 +46,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 5",
       alt: "웹디자인 5",
-      thumb: "/assets/portfolio/ex01.png",
-      images: ["/assets/portfolio/ex01.png"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 5 설명.",
     },
     {
@@ -52,8 +55,8 @@ const DATA = {
       category: "promotion",
       title: "웹디자인 6",
       alt: "웹디자인 6",
-      thumb: "/assets/portfolio/ex01.png",
-      images: ["/assets/portfolio/ex01.png"],
+      thumb: p001,
+      images: p001,
       description: "프로모션 웹디자인 6 설명.",
     },
   ],
@@ -63,8 +66,8 @@ const DATA = {
       category: "detail",
       title: "상세페이지 1",
       alt: "상세페이지 1",
-      thumb: "/assets/portfolio/detail/d1.jpg",
-      images: ["/assets/portfolio/detail/d1.jpg"],
+      thumb: d001,
+      images: d001,
       description: "상세페이지 1 설명.",
     },
     {
@@ -72,8 +75,8 @@ const DATA = {
       category: "detail",
       title: "상세페이지 2",
       alt: "상세페이지 2",
-      thumb: "/assets/portfolio/detail/d2.jpg",
-      images: ["/assets/portfolio/detail/d2.jpg"],
+      thumb: d001,
+      images: d001,
       description: "상세페이지 2 설명.",
     },
     {
@@ -81,8 +84,8 @@ const DATA = {
       category: "detail",
       title: "상세페이지 3",
       alt: "상세페이지 3",
-      thumb: "/assets/portfolio/detail/d3.jpg",
-      images: ["/assets/portfolio/detail/d3.jpg"],
+      thumb: d001,
+      images: d001,
       description: "상세페이지 3 설명.",
     },
     {
@@ -90,8 +93,8 @@ const DATA = {
       category: "detail",
       title: "상세페이지 4",
       alt: "상세페이지 4",
-      thumb: "/assets/portfolio/detail/d4.jpg",
-      images: ["/assets/portfolio/detail/d4.jpg"],
+      thumb: d001,
+      images: d001,
       description: "상세페이지 4 설명.",
     },
     {
@@ -99,8 +102,8 @@ const DATA = {
       category: "detail",
       title: "상세페이지 5",
       alt: "상세페이지 5",
-      thumb: "/assets/portfolio/detail/d5.jpg",
-      images: ["/assets/portfolio/detail/d5.jpg"],
+      thumb: d001,
+      images: d001,
       description: "상세페이지 5 설명.",
     },
   ],
@@ -110,8 +113,8 @@ const DATA = {
       category: "banner",
       title: "배너 1",
       alt: "배너 1",
-      thumb: "/assets/portfolio/banner/b1.jpg",
-      images: ["/assets/portfolio/banner/b1.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 1 설명.",
     },
     {
@@ -119,8 +122,8 @@ const DATA = {
       category: "banner",
       title: "배너 2",
       alt: "배너 2",
-      thumb: "/assets/portfolio/banner/b2.jpg",
-      images: ["/assets/portfolio/banner/b2.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 2 설명.",
     },
     {
@@ -128,8 +131,8 @@ const DATA = {
       category: "banner",
       title: "배너 3",
       alt: "배너 3",
-      thumb: "/assets/portfolio/banner/b3.jpg",
-      images: ["/assets/portfolio/banner/b3.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 3 설명.",
     },
     {
@@ -137,8 +140,8 @@ const DATA = {
       category: "banner",
       title: "배너 4",
       alt: "배너 4",
-      thumb: "/assets/portfolio/banner/b4.jpg",
-      images: ["/assets/portfolio/banner/b4.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 4 설명.",
     },
     {
@@ -146,8 +149,8 @@ const DATA = {
       category: "banner",
       title: "배너 5",
       alt: "배너 5",
-      thumb: "/assets/portfolio/banner/b5.jpg",
-      images: ["/assets/portfolio/banner/b5.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 5 설명.",
     },
     {
@@ -155,8 +158,8 @@ const DATA = {
       category: "banner",
       title: "배너 6",
       alt: "배너 6",
-      thumb: "/assets/portfolio/banner/b6.jpg",
-      images: ["/assets/portfolio/banner/b6.jpg"],
+      thumb: b001,
+      images: b001,
       description: "배너 6 설명.",
     },
   ],
