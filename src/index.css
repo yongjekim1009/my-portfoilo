@@ -23,7 +23,13 @@ html {
   --font-size-display2: 5.6rem;
   --font-size-headline: 4.8rem;
   --font-size-title: 2rem;
-  --font-size-body: 1.6rem;
+  --font-size-body: 1.8rem;
+
+  --font-skill-name: 1.8rem;
+
+  --font-contact-type: 1.8rem;
+  --font-contact-link: 2.4rem;
+  --font-contact-address: 1.6rem;
 
   /* Brand */
   --color-primary500: #4200ff;
@@ -62,6 +68,38 @@ html {
   --dark-mode-icon-color: #111;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --font-size-display1: 7.2rem;
+    --font-size-display2: 4.8rem;
+    --font-size-headline: 3.6rem;
+    --font-size-title: 1.8rem;
+    --font-size-body: 1.6rem;
+
+    --font-skill-name: 1.6rem;
+
+    --font-contact-type: 1.6rem;
+    --font-contact-link: 2rem;
+    --font-contact-address: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --font-size-display1: 5.6rem;
+    --font-size-display2: 3.6rem;
+    --font-size-headline: 2.4rem;
+    --font-size-title: 1.6rem;
+    --font-size-body: 1.4rem;
+
+    --font-skill-name: 1.6rem;
+
+    --font-contact-type: 1.4rem;
+    --font-contact-link: 1.8rem;
+    --font-contact-address: 1.2rem;
+  }
+}
+
 body.dark-mode {
   /* Text */
   --color-text-basic: #fff;
@@ -79,11 +117,14 @@ body.dark-mode {
 
   /* Border / Divider */
   --color-border-basic: #fff;
-  --color-border-sub: #2f2f31;
+  --color-border-sub: #333;
 
   /* Button */
   --btn-color-text-disable: #999;
   --btn-color-bg-disable: #292929;
+
+  --btn-color-line-text: #fff;
+  --btn-color-line: #505050;
 
   /* Darkmode Button */
   --dark-mode-btn-color: #505050;

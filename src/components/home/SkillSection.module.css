@@ -6,7 +6,6 @@
 }
 
 .skill-wrapper {
-  padding: 0 12rem;
   margin-bottom: 4.8rem;
 }
 
@@ -26,15 +25,47 @@
 .skill-group {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
-  display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--skill-min, 19.6rem), 1fr)
+  );
+  align-content: start;
+  justify-items: stretch;
 }
 
+/* ====== 애니메이션 핵심 ====== */
 .skill {
-  width: 196px;
-  height: 196px;
+  width: 100%;
   padding: 3rem 3.3rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  /* 초기 상태: 아래에서, 투명 */
+  opacity: 0;
+  transform: translateY(24px);
+  /* 부드러운 등장 */
+  transition: opacity 600ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* 인덱스 기반 딜레이: 0, 80ms, 160ms ... */
+  transition-delay: calc(var(--delay, 0) * 80ms);
+}
+
+/* 컨테이너가 뷰에 들어오면 모든 자식 skill이 순차적으로 나타남 */
+.inView .skill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 사용자 OS가 모션 최소화를 원하면 애니메이션을 끔 */
+@media (prefers-reduced-motion: reduce) {
+  .skill {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .skill-icon {
@@ -43,6 +74,6 @@
 }
 
 .skill-name {
-  font-size: 1.8rem;
+  font-size: var(--font-skill-name);
   font-weight: 500;
 }

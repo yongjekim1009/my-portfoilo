@@ -28,5 +28,5 @@
 .line-btn {
   background-color: transparent;
   color: var(--btn-color-line-text);
-  border: 1px solid var(--btn-color-line);
+  border: 1.5px solid var(--btn-color-line);
 }

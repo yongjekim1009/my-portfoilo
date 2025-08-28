@@ -7,7 +7,7 @@ const DATA = {
   promotion: [
     {
       id: "web-1",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 1",
       alt: "웹디자인 1",
       thumb: p001,
@@ -16,7 +16,7 @@ const DATA = {
     },
     {
       id: "web-2",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 2",
       alt: "웹디자인 2",
       thumb: p001,
@@ -25,7 +25,7 @@ const DATA = {
     },
     {
       id: "web-3",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 3",
       alt: "웹디자인 3",
       thumb: p001,
@@ -34,7 +34,7 @@ const DATA = {
     },
     {
       id: "web-4",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 4",
       alt: "웹디자인 4",
       thumb: p001,
@@ -43,7 +43,7 @@ const DATA = {
     },
     {
       id: "web-5",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 5",
       alt: "웹디자인 5",
       thumb: p001,
@@ -52,7 +52,7 @@ const DATA = {
     },
     {
       id: "web-6",
-      category: "promotion",
+      category: "프로모션",
       title: "웹디자인 6",
       alt: "웹디자인 6",
       thumb: p001,
@@ -63,7 +63,7 @@ const DATA = {
   detail: [
     {
       id: "detail-1",
-      category: "detail",
+      category: "상세페이지",
       title: "상세페이지 1",
       alt: "상세페이지 1",
       thumb: d001,
@@ -72,7 +72,7 @@ const DATA = {
     },
     {
       id: "detail-2",
-      category: "detail",
+      category: "상세페이지",
       title: "상세페이지 2",
       alt: "상세페이지 2",
       thumb: d001,
@@ -81,7 +81,7 @@ const DATA = {
     },
     {
       id: "detail-3",
-      category: "detail",
+      category: "상세페이지",
       title: "상세페이지 3",
       alt: "상세페이지 3",
       thumb: d001,
@@ -90,7 +90,7 @@ const DATA = {
     },
     {
       id: "detail-4",
-      category: "detail",
+      category: "상세페이지",
       title: "상세페이지 4",
       alt: "상세페이지 4",
       thumb: d001,
@@ -99,7 +99,7 @@ const DATA = {
     },
     {
       id: "detail-5",
-      category: "detail",
+      category: "상세페이지",
       title: "상세페이지 5",
       alt: "상세페이지 5",
       thumb: d001,
@@ -110,7 +110,7 @@ const DATA = {
   banner: [
     {
       id: "banner-1",
-      category: "banner",
+      category: "배너",
       title: "배너 1",
       alt: "배너 1",
       thumb: b001,
@@ -119,7 +119,7 @@ const DATA = {
     },
     {
       id: "banner-2",
-      category: "banner",
+      category: "배너",
       title: "배너 2",
       alt: "배너 2",
       thumb: b001,
@@ -128,7 +128,7 @@ const DATA = {
     },
     {
       id: "banner-3",
-      category: "banner",
+      category: "배너",
       title: "배너 3",
       alt: "배너 3",
       thumb: b001,
@@ -137,7 +137,7 @@ const DATA = {
     },
     {
       id: "banner-4",
-      category: "banner",
+      category: "배너",
       title: "배너 4",
       alt: "배너 4",
       thumb: b001,
@@ -146,7 +146,7 @@ const DATA = {
     },
     {
       id: "banner-5",
-      category: "banner",
+      category: "배너",
       title: "배너 5",
       alt: "배너 5",
       thumb: b001,
@@ -155,7 +155,7 @@ const DATA = {
     },
     {
       id: "banner-6",
-      category: "banner",
+      category: "배너",
       title: "배너 6",
       alt: "배너 6",
       thumb: b001,

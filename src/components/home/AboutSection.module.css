@@ -4,14 +4,14 @@
 
 .about-container {
   max-width: var(--layout-width);
-  padding: var(--spacing-section-x);
+  padding: 4rem 2rem;
   margin: 0 auto;
   width: 100%;
-  min-height: 64rem;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 4rem;
 }
 
 .about-intro {
@@ -24,9 +24,20 @@
 }
 
 .about-img {
+  flex: 1;
+  max-width: 51rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   transform: translateX(5rem);
   transition: opacity 0.3s, transform 0.3s;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .about-intro h1 {
@@ -61,11 +72,11 @@
 }
 
 .fade-in-left {
-  animation: fadeInLeft 1s ease-out forwards;
+  animation: fadeInLeft 700ms ease-out forwards;
 }
 
 .fade-in-right {
-  animation: fadeInRight 1s ease-out forwards;
+  animation: fadeInRight 700ms ease-out forwards;
 }
 
 @keyframes fadeInLeft {
@@ -87,5 +98,11 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-img {
+    display: none;
   }
 }

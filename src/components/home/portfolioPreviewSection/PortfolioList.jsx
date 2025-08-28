@@ -32,7 +32,7 @@ export default function PortfolioList({ category }) {
               src={item.src}
               alt={item.alt}
               loading="lazy"
-              className={styles.image}
+              className={styles["card-img"]}
             />
           </figure>
         ))}

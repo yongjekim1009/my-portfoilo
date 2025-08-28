@@ -1,13 +1,19 @@
 import { useMemo } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./PortfolioDetailPage.module.css";
 import usePortfolioStore from "../../store/portfolioStore";
+import { Button } from "../common/Button";
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const findById = usePortfolioStore((s) => s.findById);
 
   const item = useMemo(() => findById(id), [id, findById]);
+
+  const handleBack = () => {
+    navigate("/portfolio");
+  };
 
   if (!item) {
     return (
@@ -16,9 +22,9 @@ const PortfolioDetailPage = () => {
         <p className={styles["detail-title-content"]}>
           잘못된 주소이거나 삭제된 항목일 수 있어요.
         </p>
-        <Link to="/portfolio" className={styles["back-link"]}>
-          ← 목록으로 돌아가기
-        </Link>
+        <Button variant="line-btn" onClick={handleBack}>
+          목록
+        </Button>
       </div>
     );
   }
@@ -44,10 +50,10 @@ const PortfolioDetailPage = () => {
         )}
       </div>
 
-      <div className={styles["detail-footer-nav"]}>
-        <Link to="/portfolio" className={styles["back-link"]}>
-          ← 목록으로 돌아가기
-        </Link>
+      <div className={styles["detail-list"]}>
+        <Button variant="line-btn" onClick={handleBack}>
+          목록
+        </Button>
       </div>
     </div>
   );

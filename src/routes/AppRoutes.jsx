@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "../components/common/Header";
 import useDarkMode from "../components/darkmode/UseDarkMode";
+import ScrollToTop from "../components/common/ScrollToTop";
 import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
 import PortfolioDetail from "./../pages/PortfolioDetail";
@@ -13,6 +14,7 @@ const AppRoutes = () => {
   return (
     <>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />

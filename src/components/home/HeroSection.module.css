@@ -50,6 +50,16 @@
   animation-fill-mode: both;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-bg {
+    height: 80vh;
+  }
+
+  .hero-container {
+    margin: 0 auto;
+  }
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;

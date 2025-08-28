@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
 import styles from "./AboutSection.module.css";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import aboutImg from "../../assets/images/home/about-img.svg";
 import moreBtn from "../../assets/images/button/more-btn-icon.svg";
 
@@ -60,9 +61,9 @@ export const AboutSection = () => {
             <br />
             브랜드와 사람을 연결시키는 의미 있는 경험을 만들겠습니다.
           </p>
-          <button>
-            <img src={moreBtn} alt="더보기 버튼" />
-          </button>
+          <Link to="/about" aria-label="소개 더보기">
+            <img src={moreBtn} alt="소개 더보기 버튼" aria-hidden="true" />
+          </Link>
         </div>
         <div
           ref={imgRef}

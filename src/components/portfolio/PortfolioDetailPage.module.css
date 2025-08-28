@@ -6,29 +6,19 @@
 }
 
 .detail-category-name {
-  font-size: 14px;
-  color: #767676;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  color: var(--color-text-disable);
+  margin-bottom: 4px;
 }
 
 .detail-title {
-  font-size: 32px;
-  line-height: 1.3;
-  margin: 0 0 12px;
-}
-
-.detail-title-content {
-  color: #505050;
-  line-height: 1.7;
+  font-size: 3.2rem;
   margin-bottom: 24px;
 }
 
-.detail-footer-nav {
-  margin-top: 24px;
-}
-
-.back-link {
-  color: var(--color-primary, #4200ff);
-  text-decoration: none;
-  font-weight: 600;
+.detail-title-content {
+  font-size: 16px;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+  margin-bottom: 8rem;
 }
