@@ -77,3 +77,12 @@
   font-size: var(--font-skill-name);
   font-weight: 500;
 }
+
+@media screen and (max-width: 767px) {
+  .skill-group {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(var(--skill-min, 12rem), 1fr)
+    );
+  }
+}

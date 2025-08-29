@@ -22,9 +22,11 @@ const PortfolioDetailPage = () => {
         <p className={styles["detail-title-content"]}>
           잘못된 주소이거나 삭제된 항목일 수 있어요.
         </p>
-        <Button variant="line-btn" onClick={handleBack}>
-          목록
-        </Button>
+        <div className={styles["detail-list-view"]}>
+          <Button variant="line-btn" onClick={handleBack}>
+            목록보기
+          </Button>
+        </div>
       </div>
     );
   }
@@ -40,19 +42,23 @@ const PortfolioDetailPage = () => {
         {item.description || "프로젝트 설명을 입력해주세요."}
       </p>
 
-      <div className={styles["detail-img"]}>
+      <div className={styles["detail-img-section"]}>
         {detailSrc ? (
-          <figure className={styles["detail-image-wrap"]}>
-            <img src={detailSrc} alt={item.alt || item.title} />
+          <figure className={styles["detail-img-wrap"]}>
+            <img
+              src={detailSrc}
+              alt={item.alt || item.title}
+              className={styles["detail-img"]}
+            />
           </figure>
         ) : (
           <p>이미지가 없습니다.</p>
         )}
       </div>
 
-      <div className={styles["detail-list"]}>
+      <div className={styles["detail-list-view"]}>
         <Button variant="line-btn" onClick={handleBack}>
-          목록
+          목록보기
         </Button>
       </div>
     </div>

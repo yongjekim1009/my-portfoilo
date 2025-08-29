@@ -61,7 +61,11 @@ export const AboutSection = () => {
             <br />
             브랜드와 사람을 연결시키는 의미 있는 경험을 만들겠습니다.
           </p>
-          <Link to="/about" aria-label="소개 더보기">
+          <Link
+            to="/about"
+            aria-label="소개 더보기"
+            className={styles["more-btn-link"]}
+          >
             <img src={moreBtn} alt="소개 더보기 버튼" aria-hidden="true" />
           </Link>
         </div>

@@ -41,6 +41,10 @@
   height: 5.6rem;
 }
 
+.header-menu a:hover {
+  color: var(--color-menu-hover);
+}
+
 /* 다크모드 버튼 */
 .mode-btn {
   background-color: var(--dark-mode-btn-color);
@@ -113,60 +117,54 @@
   line-height: 0;
 }
 
-/* 아이콘 래퍼: 여기서 회전/스케일/투명도 애니메이션 */
-.icon-wrap {
+/* 두 아이콘을 겹쳐놓고 상태로 회전/투명도 전환 */
+.icon-stack {
+  position: relative;
   display: inline-flex;
-  width: 2.4rem;
-  height: 2.4rem;
   align-items: center;
   justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+/* 공통 아이콘 스타일 */
+.stack-icon {
+  position: absolute;
+  inset: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-mode-icon-color);
+  /* 회전/투명도/스케일 전환 */
+  transition: transform 0.25s ease, opacity 0.25s ease, scale 0.25s ease;
   transform-origin: 50% 50%;
 }
 
-/* 90도 회전 - 시계 방향 (열기: 햄버거→닫기) */
-@keyframes wrap-spin-90-cw {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(90deg) scale(0.9);
-    opacity: 0.7;
-  }
+/* 닫혀있을 때(초기): 햄버거 보임, 닫기 숨김 */
+.menu {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.close {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.95);
 }
 
-/* 90도 회전 - 반시계 방향 (닫기: 닫기→햄버거) */
-@keyframes wrap-spin-90-ccw {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-90deg) scale(0.9);
-    opacity: 0.7;
-  }
+/* 열렸을 때: 햄버거 숨김(90°), 닫기 보임(0°) */
+.icon-stack.open .menu {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.95);
 }
-
-/* 버튼 클릭 시 래퍼에 붙일 클래스들 */
-.wrap-spin-90-cw {
-  animation: wrap-spin-90-cw 0.18s linear both;
-  will-change: transform, opacity;
-}
-.wrap-spin-90-ccw {
-  animation: wrap-spin-90-ccw 0.18s linear both;
-  will-change: transform, opacity;
-}
-
-/* 실제 SVG 크기 */
-.hamburger-icon {
-  width: 2.8rem;
-  height: 2.8rem;
+.icon-stack.open .close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 /* 드롭다운 컨테이너 */
 .mobile-menu {
   position: absolute;
-  top: 5.6rem; /* 헤더 높이와 동일 */
   left: 0;
   right: 0;
   background-color: var(--color-header-bg);
@@ -180,17 +178,15 @@
 
 /* 펼쳐졌을 때 */
 .mobile-menu.open {
-  max-height: 300px;
+  max-height: 300px; /* 필요 시 높이 조정 */
 }
 
 .mobile-menu-list {
   font-family: "Roboto", sans-serif;
   list-style: none;
-  margin: 0;
   padding: var(--spacing-section-x);
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
   letter-spacing: 0;
 }
 
@@ -199,10 +195,6 @@
   padding: 1.2rem 0;
   font-size: 1.6rem;
   border-radius: 6px;
-}
-
-.mobile-link:hover {
-  background-color: var(--color-bg-soft);
 }
 
 /* 모바일 메뉴 안의 다크모드 라인 */
@@ -222,5 +214,9 @@
   }
   .hamburger-btn {
     display: inline-flex;
+  }
+
+  .mobile-link:hover {
+    color: var(--color-menu-hover);
   }
 }

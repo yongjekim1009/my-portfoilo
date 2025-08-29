@@ -4,7 +4,7 @@
     auto-fit,
     minmax(var(--card-min, 30.5rem), 1fr)
   );
-  gap: 2rem;
+  gap: 4.8rem 2rem;
   margin-top: 4.8rem;
   justify-content: center;
 }
@@ -29,8 +29,26 @@
 }
 
 .thumb-title {
-  margin-top: 1.2rem;
-  font-size: 1.6rem;
+  margin-top: 0.8rem;
+  font-size: var(--font-portfolio-title);
   line-height: 1.5;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일: 2열 고정 */
+  .thumb-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4.8rem 1.6rem; /* 모바일 간격 살짝 축소 */
+    justify-content: stretch;
+  }
+
+  /* 카드 크기 살짝 축소(선택) */
+  .thumb-item {
+    border-radius: 6px;
+  }
+
+  .thumb-title {
+    margin-top: 0.8rem;
+  }
 }

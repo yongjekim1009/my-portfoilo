@@ -8,17 +8,33 @@
 .detail-category-name {
   font-size: 1.6rem;
   color: var(--color-text-disable);
-  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
 }
 
 .detail-title {
   font-size: 3.2rem;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .detail-title-content {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: var(--color-text-sub);
   line-height: 1.5;
   margin-bottom: 8rem;
+}
+
+.detail-img-wrap {
+  max-width: 86rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.detail-img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-list-view {
+  margin-top: 4rem;
 }

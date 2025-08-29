@@ -19,11 +19,14 @@ html {
   --spacing-section-x: 0 2rem;
 
   /* Font size */
+  --font-size-hero-title: 8rem;
+  --font-size-hero-sub: 2rem;
+
   --font-size-display1: 8rem;
   --font-size-display2: 5.6rem;
   --font-size-headline: 4.8rem;
   --font-size-title: 2rem;
-  --font-size-body: 1.8rem;
+  --font-size-body: 1.6rem;
 
   --font-skill-name: 1.8rem;
 
@@ -31,8 +34,16 @@ html {
   --font-contact-link: 2.4rem;
   --font-contact-address: 1.6rem;
 
+  --font-page-tite: 4.8rem;
+  --font-page-content: 1.6rem;
+
+  --font-portfolio-title: 1.6rem;
+
   /* Brand */
   --color-primary500: #4200ff;
+
+  /* Menu */
+  --color-menu-hover: #4200ff;
 
   /* Text */
   --color-text-basic: #111;
@@ -70,10 +81,13 @@ html {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   :root {
+    --font-size-hero-title: 7.2rem;
+    --font-size-hero-sub: 2rem;
+
     --font-size-display1: 7.2rem;
     --font-size-display2: 4.8rem;
     --font-size-headline: 3.6rem;
-    --font-size-title: 1.8rem;
+    --font-size-title: 2rem;
     --font-size-body: 1.6rem;
 
     --font-skill-name: 1.6rem;
@@ -81,14 +95,23 @@ html {
     --font-contact-type: 1.6rem;
     --font-contact-link: 2rem;
     --font-contact-address: 1.4rem;
+
+    --font-page-tite: 4.2rem;
+    --font-page-content: 1.4rem;
   }
 }
 
 @media screen and (max-width: 767px) {
   :root {
+    /* Basic Mobile Side Margin */
+    --spacing-section-x: 0 1.6rem;
+
+    --font-size-hero-title: 4.2rem;
+    --font-size-hero-sub: 1.6rem;
+
     --font-size-display1: 5.6rem;
     --font-size-display2: 3.6rem;
-    --font-size-headline: 2.4rem;
+    --font-size-headline: 2.8rem;
     --font-size-title: 1.6rem;
     --font-size-body: 1.4rem;
 
@@ -97,6 +120,11 @@ html {
     --font-contact-type: 1.4rem;
     --font-contact-link: 1.8rem;
     --font-contact-address: 1.2rem;
+
+    --font-page-tite: 4.2rem;
+    --font-page-content: 1.4rem;
+
+    --font-portfolio-title: 1.4rem;
   }
 }
 
@@ -107,6 +135,9 @@ body.dark-mode {
   --color-text-sub: #999;
   --color-text-disable: #767676;
   --color-text-inverse: #111;
+
+  /* Menu */
+  --color-menu-hover: #8973ff;
 
   /* Background / Surface */
   --color-bg-basic: #111;
