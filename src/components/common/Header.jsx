@@ -33,7 +33,7 @@ const Header = () => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
-  // 바깥 클릭 시 닫기 (mousedown → click, 토글 버튼/메뉴 내부 클릭은 무시)
+  // 바깥 클릭 시 닫기
   useEffect(() => {
     if (!isMenuOpen) return;
 

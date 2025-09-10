@@ -1,38 +1,20 @@
 .wrapper {
-  position: relative;
-  width: 100%;
+  max-width: var(--layout-width);
+  padding: var(--spacing-section-x);
   margin: 6.4rem auto 0;
   overflow: hidden;
-  padding: 0 2rem; /* 좌우 여백 */
 }
 
-/* 무한 루프 트랙 */
-.track {
-  display: flex;
-  align-items: stretch;
+.group {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
-  /* 트랙을 왼쪽으로 계속 이동 */
-  animation: scroll-left linear infinite;
-  /* 아이템 수가 적을수록 약간 더 빠르게 */
-  animation-duration: calc(15s - min(var(--items, 6) * 0.6s, 10s));
-  will-change: transform;
 }
 
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    /* 리스트를 2배로 렌더링했기 때문에, 정확히 50%(-50%) 이동 시 무한 접합 */
-    transform: translateX(-50%);
-  }
-}
-
-/* 개별 카드 박스 */
+/* 개별 카드 */
 .card {
-  flex: 0 0 auto;
-  inline-size: clamp(16rem, 45vw, 30.5rem);
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 유지 */
   border-radius: 8px;
   background: #eee;
   overflow: hidden;
@@ -45,10 +27,20 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 767px) {
-  .track {
-    /* 트랙을 왼쪽으로 계속 이동 */
-    animation: scroll-left linear infinite;
-    animation-duration: calc(10s - min(var(--items, 6) * 0.6s, 10s));
+/* 태블릿: 2열 */
+@media (max-width: 1024px) {
+  .group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 모바일: 2열 */
+@media (max-width: 767px) {
+  .group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .group {
+    gap: 1.6rem;
   }
 }

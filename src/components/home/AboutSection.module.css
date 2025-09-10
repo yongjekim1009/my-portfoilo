@@ -20,8 +20,8 @@
   flex-direction: column;
   gap: 4.8rem;
   opacity: 0;
-  transform: translateX(-5rem);
-  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(-10rem);
+  transition: opacity 0.1s, transform 0.1s;
 }
 
 .more-btn-link {
@@ -37,8 +37,8 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateX(5rem);
-  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(10rem);
+  transition: opacity 0.1s, transform 0.1s;
 }
 
 .about-img img {
@@ -73,17 +73,17 @@
 }
 
 .fade-in-left {
-  animation: fadeInLeft 700ms ease-out forwards;
+  animation: fadeInLeft 500ms ease-out forwards;
 }
 
 .fade-in-right {
-  animation: fadeInRight 700ms ease-out forwards;
+  animation: fadeInRight 500ms ease-out forwards;
 }
 
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-5rem);
+    transform: translateX(-20rem);
   }
   100% {
     opacity: 1;
@@ -94,7 +94,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(5rem);
+    transform: translateX(20rem);
   }
   100% {
     opacity: 1;

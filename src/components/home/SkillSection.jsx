@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from "react";
-import styles from "./skillSection.module.css";
+import styles from "./SkillSection.module.css";
 
 import photoshop from "../../assets/images/tool/photoshop-icon.svg";
 import illustrator from "../../assets/images/tool/illustrator-icon.svg";
