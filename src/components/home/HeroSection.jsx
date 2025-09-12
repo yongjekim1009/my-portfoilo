@@ -9,8 +9,9 @@ export const HeroSection = () => {
       <div className={styles["hero-container"]}>
         <h1>Creative Designer</h1>
         <h2>
-          <strong>사용자 중심의 디자인</strong>으로
-          <br />더 나은 경험을 만들어갑니다.
+          단순한 시각적 표현을 넘어
+          <br />
+          <strong>더 나은 가치</strong>를 만들어가겠습니다
         </h2>
 
         <div className={styles["btn-group"]}>
