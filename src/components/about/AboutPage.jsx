@@ -52,7 +52,7 @@ const AboutPage = () => {
               <div className={styles["about-card-img"]}></div>
               <div className={styles["about-card-content"]}>
                 <h3 className={styles["about-card-title"]}>
-                  브랜드와 사용자의 연결
+                  브랜드와 고객과의 연결
                 </h3>
                 <p className={styles["about-card-description"]}>
                   브랜드 메시지를 정확히 전달하는
