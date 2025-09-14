@@ -107,7 +107,7 @@ const AboutPage = () => {
               </div>
 
               <div className={styles["about-mind-quote"]}>
-                '픽셀을 디자인하는 것을 넘어 가치를 만듭니다.'
+                픽셀을 디자인하는 것을 넘어 가치를 만듭니다.
               </div>
               <div className={styles["about-mind-description"]}>
                 <p>
@@ -125,7 +125,7 @@ const AboutPage = () => {
                 How I Work
               </div>
               <div className={styles["about-mind-quote"]}>
-                ‘좋은 디자인은 혼자가 아닌 함께 만들어가는 것이라고 믿습니다.’
+                좋은 디자인은 혼자가 아닌 함께 만들어가는 것이라고 믿습니다.
               </div>
               <div className={styles["about-mind-description"]}>
                 <p>
@@ -147,7 +147,7 @@ const AboutPage = () => {
               </div>
 
               <div className={styles["about-mind-quote"]}>
-                ‘감각과 논리를 통해 브랜드의 가치를 시각적으로 구현합니다.’
+                감각과 논리를 통해 브랜드의 가치를 시각적으로 구현합니다.
               </div>
               <div className={styles["about-mind-description"]}>
                 <p>
@@ -166,7 +166,7 @@ const AboutPage = () => {
               </div>
 
               <div className={styles["about-mind-quote"]}>
-                ‘혼자 잘하는 사람보다, 함께 성장하는 사람이 되고자 합니다.’
+                혼자 잘하는 사람보다 함께 성장하는 사람이 되고자 합니다.
               </div>
               <div className={styles["about-mind-description"]}>
                 <p>
