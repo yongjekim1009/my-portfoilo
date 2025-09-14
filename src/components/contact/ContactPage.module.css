@@ -23,3 +23,63 @@
   color: var(--color-text-sub);
   line-height: 1.5;
 }
+
+.contact-group {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  gap: 2rem;
+}
+
+.contact-section {
+  width: 30.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 1.6rem 0;
+  background-color: var(--color-bg-soft);
+  border-radius: 8px;
+  box-shadow: 24px 40px 44px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-icon img {
+  width: clamp(7.2rem, 12vw, 10.8rem);
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-type {
+  font-weight: 500;
+  font-size: var(--font-contact-type);
+  margin-bottom: 1.2rem;
+}
+
+.contact-link {
+  font-size: var(--font-contact-link);
+}
+
+.address {
+  font-size: var(--font-contact-address);
+  color: var(--color-text-sub);
+  margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-section {
+    padding: 4rem 1.6rem 0;
+  }
+
+  .contact-group {
+    gap: 1.6rem;
+  }
+
+  .address {
+    margin-bottom: 4rem;
+  }
+}
