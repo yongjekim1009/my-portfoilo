@@ -1,6 +1,6 @@
 .hero-bg {
-  height: 100vh;
-  background: url("/src/assets/images/home/hero_bg.svg");
+  height: 77.6rem;
+  background: url("/src/assets/images/home/hero-bg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@
 
 .hero-container h2 {
   font-size: var(--font-size-hero-sub);
-  font-weight: 200;
+  font-weight: 300;
   margin-bottom: 3.2rem;
 
   animation: fadeInUp 0.5s ease-out;
@@ -39,7 +39,7 @@
 }
 
 .hero-container h2 > strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn-group {
@@ -64,7 +64,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-bg {
-    height: 80vh;
+    height: 64rem;
   }
 
   .hero-container {
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 767px) {
   .hero-bg {
-    height: 80vh;
+    height: 64rem;
   }
 
   .hero-container {

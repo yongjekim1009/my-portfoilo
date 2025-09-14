@@ -11,13 +11,12 @@
 
 .contact-container h1 {
   font-size: var(--font-size-headline);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2.4rem;
 }
 
 .contact-container p {
   font-size: var(--font-size-body);
-  font-weight: 400;
   color: var(--color-text-sub);
   line-height: 1.5;
 }
@@ -87,13 +86,11 @@
 }
 
 .contact-link {
-  font-weight: 400;
   font-size: var(--font-contact-link);
 }
 
 .address {
   font-size: var(--font-contact-address);
-  font-weight: 400;
   color: var(--color-text-sub);
   margin-bottom: 8rem;
 }

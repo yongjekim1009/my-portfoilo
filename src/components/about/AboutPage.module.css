@@ -1,3 +1,15 @@
+.about-page-section {
+  background-color: #111;
+}
+
+.about-header {
+  padding-top: 13.6rem;
+  background: url("/src/assets/images/about/about-page-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .about-container {
   max-width: var(--layout-width);
   padding: var(--spacing-section-x);
@@ -5,21 +17,165 @@
   text-align: center;
 }
 
-.about-wrapper {
-  margin-bottom: 4.8rem;
-}
-
-.about-wrapper h1 {
+.about-header p:first-of-type {
   font-family: "Roboto", sans-serif;
-  font-size: var(--font-page-tite);
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 2.4rem;
+  color: #8973ff;
   letter-spacing: 0;
 }
 
-.about-wrapper p {
-  font-size: var(--font-page-content);
-  font-weight: 400;
-  color: var(--color-text-sub);
+.about-header h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.4rem;
+}
+
+.about-header p:last-of-type {
+  font-size: 1.6rem;
+  color: #999;
+  margin-top: 2.4rem;
   line-height: 1.5;
+}
+
+.about-divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 80px auto;
+}
+
+.about-label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #767676;
+  letter-spacing: 0;
+}
+
+.about-title h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.4rem;
+}
+
+.about-title p {
+  font-size: 1.6rem;
+  color: #999;
+  margin-top: 2.4rem;
+  line-height: 1.5;
+}
+
+.about-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--card-min, 30.4rem), 1fr)
+  );
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.about-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #222;
+}
+
+.about-card-img {
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 이미지 개별 스타일 */
+.card1 .about-card-img {
+  background-image: url("/src/assets/images/about/about-page-img-01.svg");
+}
+
+.card2 .about-card-img {
+  background-image: url("/src/assets/images/about/about-page-img-02.svg");
+}
+
+.card3 .about-card-img {
+  background-image: url("/src/assets/images/about/about-page-img-03.svg");
+}
+
+.card4 .about-card-img {
+  background-image: url("/src/assets/images/about/about-page-img-04.svg");
+}
+
+.about-card-content {
+  padding: 2.4rem;
+}
+
+.about-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.about-card-description {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #999;
+}
+
+.about-mind-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.about-mind-card {
+  border: 1px solid #8973ff;
+  border-radius: 8px;
+  padding: 4.8rem;
+  text-align: left;
+}
+
+.about-mind-card-title {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #505050;
+  margin-bottom: 4.8rem;
+  line-height: 1;
+}
+
+.about-mind-card-no {
+  font-size: 4.8rem;
+  color: #505050;
+}
+
+.about-mind-quote {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.about-mind-description {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #999;
+}
+
+@media screen and (max-width: 767px) {
+  .about-mind-card-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card-wrapper,
+  .about-mind-card-wrapper {
+    gap: 1.6rem;
+  }
+
+  .about-mind-card {
+    padding: 2.4rem;
+  }
 }

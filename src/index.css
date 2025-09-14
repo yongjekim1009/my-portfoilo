@@ -167,6 +167,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
   letter-spacing: -0.05rem;
+  font-weight: 400;
   color: var(--color-text-basic);
   background-color: var(--color-bg-basic);
 }

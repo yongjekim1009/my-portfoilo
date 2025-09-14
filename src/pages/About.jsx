@@ -6,9 +6,7 @@ import AboutPage from "./../components/about/AboutPage";
 const About = () => {
   return (
     <MainLayout>
-      <TopSpace />
       <AboutPage />
-      <BottomSpace />
     </MainLayout>
   );
 };

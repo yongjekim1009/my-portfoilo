@@ -58,16 +58,16 @@
 
 .about-intro h2 {
   font-size: var(--font-size-title);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .about-intro strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .about-intro p {
   font-size: var(--font-size-body);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
   color: #999;
 }
