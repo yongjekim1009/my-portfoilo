@@ -20,12 +20,12 @@ html {
 
   /* Font size */
   --font-size-hero-title: 8rem;
-  --font-size-hero-sub: 2rem;
+  --font-size-hero-sub: 1.8rem;
 
   --font-size-display1: 8rem;
   --font-size-display2: 5.6rem;
   --font-size-headline: 4.8rem;
-  --font-size-title: 2rem;
+  --font-size-title: 1.8rem;
   --font-size-body: 1.6rem;
 
   --font-skill-name: 1.8rem;
@@ -82,12 +82,12 @@ html {
 @media (min-width: 768px) and (max-width: 1023px) {
   :root {
     --font-size-hero-title: 7.2rem;
-    --font-size-hero-sub: 2rem;
+    --font-size-hero-sub: 1.8rem;
 
     --font-size-display1: 7.2rem;
     --font-size-display2: 4.8rem;
     --font-size-headline: 3.6rem;
-    --font-size-title: 2rem;
+    --font-size-title: 1.8rem;
     --font-size-body: 1.6rem;
 
     --font-skill-name: 1.6rem;

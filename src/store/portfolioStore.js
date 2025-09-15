@@ -59,6 +59,24 @@ const DATA = {
       images: p001,
       description: "프로모션 웹디자인 6 설명.",
     },
+    {
+      id: "web-7",
+      category: "프로모션",
+      title: "웹디자인 7",
+      alt: "웹디자인 7",
+      thumb: p001,
+      images: p001,
+      description: "프로모션 웹디자인 7 설명.",
+    },
+    {
+      id: "web-8",
+      category: "프로모션",
+      title: "웹디자인 8",
+      alt: "웹디자인 8",
+      thumb: p001,
+      images: p001,
+      description: "프로모션 웹디자인 8 설명.",
+    },
   ],
   detail: [
     {

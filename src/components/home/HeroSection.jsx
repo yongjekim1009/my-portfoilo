@@ -11,7 +11,7 @@ export const HeroSection = () => {
         <h2>
           단순한 시각적 표현을 넘어
           <br />
-          <strong>더 나은 가치</strong>를 만들어가겠습니다
+          의미 있는 <strong>디자인 가치</strong>를 만들어갑니다.
         </h2>
 
         <div className={styles["btn-group"]}>
