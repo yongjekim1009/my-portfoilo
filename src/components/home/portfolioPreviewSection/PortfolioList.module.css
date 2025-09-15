@@ -1,20 +1,41 @@
 .wrapper {
-  max-width: var(--layout-width);
-  padding: var(--spacing-section-x);
+  width: 100%;
   margin: 6.4rem auto 0;
+  overflow: hidden;
+
+  /* 기본 간격 2rem(모바일에서 1.6rem로 재정의) */
+  --gap: 2rem;
+}
+
+.viewport {
   overflow: hidden;
 }
 
-.group {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem;
+.rail {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
-/* 개별 카드 */
-.card {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* 정사각형 유지 */
+/* 접근성: 모션 줄이기 */
+@media (prefers-reduced-motion: reduce) {
+  .rail {
+    transform: none !important;
+  }
+}
+
+/* 카드: 데스크탑은 화면 비율 기반 + clamp */
+.item {
+  flex: 0 0 auto;
+  width: clamp(
+    16rem,
+    18vw,
+    30.5rem
+  ); /* 데스크탑: 화면 비율에 따라 살짝 작아짐 */
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
   background: #eee;
   overflow: hidden;
@@ -27,20 +48,19 @@
   object-fit: cover;
 }
 
-/* 태블릿: 2열 */
-@media (max-width: 1024px) {
-  .group {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* 태블릿: 768 ~ 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .item {
+    width: 20rem;
+  } /* 고정 */
 }
 
-/* 모바일: 2열 */
+/* 모바일: <= 767px */
 @media (max-width: 767px) {
-  .group {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .group {
-    gap: 1.6rem;
-  }
+  .rail {
+    --gap: 1.6rem;
+  } /* 간격 축소 */
+  .item {
+    width: 14rem;
+  } /* 고정 */
 }

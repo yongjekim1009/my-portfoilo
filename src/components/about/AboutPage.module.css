@@ -71,7 +71,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(var(--card-min, 30.4rem), 1fr)
+    minmax(var(--card-min, 30.5rem), 1fr)
   );
   gap: 2rem;
   margin-top: 4rem;
