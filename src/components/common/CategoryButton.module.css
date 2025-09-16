@@ -2,5 +2,5 @@
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
-  justify-self: center;
+  justify-content: center;
 }
